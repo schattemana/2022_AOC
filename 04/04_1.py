@@ -19,5 +19,5 @@ total = sum(data['inside'])
 #2
 data['overlap'] = (data[1] >= data[2]) & (data[0] <= data[2]) | (data[3] >= data[0]) & (data[2] <= data[1])
 total_overlap = sum(data['overlap'])
+
 print(data, total, total_overlap)
-#als [1] > [2] and [0] < [2] or [3] > [0] and [2] < [1]
