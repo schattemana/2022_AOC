@@ -10,6 +10,14 @@ data['diff_one'] = data[0] - data[2]
 data['diff_two'] = data[1] - data[3]
 data['inside'] = (data['diff_one'] <= 0) & (data['diff_two'] >= 0) | (data['diff_one'] >=0) & (data['diff_two'] <= 0)
 
-#als diff_one =< 0 en diff_two >= 0 OF als diff_one >= 0 and diff two =<0
 total = sum(data['inside'])
-print(data, total)
+
+
+
+
+
+#2
+data['overlap'] = (data[1] >= data[2]) & (data[0] <= data[2]) | (data[3] >= data[0]) & (data[2] <= data[1])
+total_overlap = sum(data['overlap'])
+print(data, total, total_overlap)
+#als [1] > [2] and [0] < [2] or [3] > [0] and [2] < [1]
